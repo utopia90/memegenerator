@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script  type="module"  src="html2canvas.min.js"></script>
+    <script src="FileSaver.js"></script>
+
+    <script src="https://cdn.rawgit.com/tsayen/dom-to-image/bfc00a6c5bba731027820199acd7b0a6e92149d8/dist/dom-to-image.min.js"></script>
+
+    <script defer type="text/javascript" src="app.js"></script>
+
+
+    <title>MEME GENERATOR</title>
+  </head>
+  <body>
+
+    <h1 style="text-align: center; color: greenyellow;background-color: black;">MEME GENERATOR</h1>
+    <h3 style="text-align: center">Create your meme easily in 3 steps!</h3>
+
+    <form
+      action="/Admin/Mail/Upload"
+      enctype="multipart/form-data"
+      method="post"
+    >
+    <div class="container-block">
+      <div class="top-container">
+        <h2>1- Upload the pic of your meme</h2>
+        <input class="loadFileBtn" type="file" accept="image/*" onchange="loadFile(event)" />
+        <h2>2- Write top text of your meme</h2>
+        <input type="text" id="toptxt" placeholder="write top text of meme"
+        onkeyup="getValueMeme(this)" />
+        <h2>3- Write bottom text of your meme</h2>
+        <input
+          type="text"
+          id="bottomtxt"
+          placeholder="write bottom text of meme"
+          onkeyup="getValueBottom(this)"
+        />
+        <h2>Download your meme!</h2>
+        <button type="button" id="convertBtn" onclick="downloadMeme()">
+         download meme
+        </button>
+      </div>
+
+        <div id="container" class="container">
+          <div class="top-left" id="top-left"></div>
+          <div class="bottom-right" id="bottom-right"></div>
+        </div>
+      </div>
+
+    </form>
+  </body>
+  <h6>meme generator app. all rights reserved. free meme generator. convert easily any gif, text to meme. meme generator gif.meme generator text.meme generator video.meme generator winter is coming.meme generator one does not simply.meme generator cat.willy wonka meme generator</h6>
+</html>

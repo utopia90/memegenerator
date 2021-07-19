@@ -1,0 +1,97 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 0.05rem;
+  width: 35rem;
+  height: 35rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'impact';
+}
+
+::-webkit-file-upload-button {
+  border: none;
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#convertBtn{
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.top-container{
+display: flex;
+flex-direction: column;
+width: 20%;
+}
+
+#toptxt, #bottomtxt{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: greenyellow;
+}
+.container-block{
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}
+@font-face {
+  font-family: 'impact';
+  src: URL('./typo/Impacted.ttf') format('truetype');
+}
+.top-left {
+  position: absolute;
+  top: 4%;
+  transform: translateY(
+    -50%
+  ); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+  width: 100%; /* needs to be defined to keep the default block behavior */
+  text-align: center;
+  margin: 0;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(
+    -50%
+  ); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+  width: 100%; /* needs to be defined to keep the default block behavior */
+  text-align: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-container {
+    display: block;
+    /* flex-direction: column; */
+    width: 100%;
+}
+
+.container-block {
+  display: block;
+}
+
+}
